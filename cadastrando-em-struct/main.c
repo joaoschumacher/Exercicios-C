@@ -10,45 +10,18 @@ int main()
         float nota1;
         float nota2;
         float nota3;
-    }aluno[20];
+        float media;
+    }aluno[19];
 
     int i=0; 
     int alunos=0;
-
-    printf("\nMatricula: ");
-    scanf("%i", &aluno[1].matricula);
-
-    printf("Nome: ");
-    gets(aluno[1].nome);
-
-    printf("Nota da prova 1: ");
-    scanf("%f", &aluno[1].nota1);
-
-    printf("Nota da prova 2: ");
-    scanf("%f", &aluno[1].nota2);
+    int maior1=0, maior2=0, maior3=0;
+    float m1=0,m2=0,m3=0;
     
-    printf("Nota da prova 3: ");
-    scanf("%f", &aluno[1].nota3);
+    printf("Quantos alunos? (maximo 20) ");
+    scanf("%i", &alunos);
 
-    printf("\nMatricula: ");
-    scanf("%i", &aluno[2].matricula);
-
-    printf("Nome: ");
-    gets(aluno[2].nome);
-
-    printf("Nota da prova 1: ");
-    scanf("%f", &aluno[2].nota1);
-
-    printf("Nota da prova 2: ");
-    scanf("%f", &aluno[2].nota2);
-    
-    printf("Nota da prova 3: ");
-    scanf("%f", &aluno[2].nota3);
-    
-    //printf("Quantos alunos? (maximo 20) ");
-    //scanf("%i", &alunos);
-
-    /*for(i=1; i < 3; i++) {
+    for(i=0; i < alunos; i++) {
         printf("\nDADOS ALUNO %i", i+1);
 
         printf("\nMatricula: ");
@@ -65,9 +38,39 @@ int main()
 
         printf("Nota da prova 3: ");
         scanf("%f", &aluno[i].nota3);
+        
         printf("\n---------------------------------------------------\n");
-        printf("Matricula: %i\nNome: %s\nn1: %f\nn2: %f\nn3: %f\n", aluno[i].matricula, aluno[i].nome, aluno[i].nota1, aluno[i].nota2, aluno[i].nota3);
-    }*/
+        
+        if (aluno[i].nota1>=m1) {
+            maior1 = i;            
+            m1 = aluno[i].nota1;
+        }
+        if (aluno[i].nota2>=m2) {
+            maior2 = i;
+            m2 = aluno[i].nota1;
+        }
+        if (aluno[i].nota3>=m3) {
+            maior3 = i;
+            m3 = aluno[i].nota1;
+        }
+    }
+    for (int i = 0; i < alunos; i++)
+    {
+        printf("\n%i",aluno[i].nota1);
+        printf("\n%i",aluno[i].nota2);
+        printf("\n%i",aluno[i].nota3);
+        printf("\n-------------");
+    }
     
+
+    printf("\nMAIOR NOTA DA PRIMEIRA PROVA\n");
+    printf("Matricula: %i\nNome: %s\nNota: %f",aluno[maior1].matricula, aluno[maior1].nome, aluno[maior1].nota1);
+    
+    printf("\nMAIOR NOTA DA SEGUNDA PROVA\n");
+    printf("Matricula: %i\nNome: %s\nNota: %f",aluno[maior2].matricula, aluno[maior2].nome, aluno[maior2].nota2);    
+
+    printf("\nMAIOR NOTA DA TERCEIRA PROVA\n");
+    printf("Matricula: %i\nNome: %s\nNota: %f",aluno[maior3].matricula, aluno[maior3].nome, aluno[maior3].nota3);
+
     return 0;
 }

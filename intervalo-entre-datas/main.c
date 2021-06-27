@@ -127,7 +127,7 @@ int main()
             }
         }
         // Escreve na tela os resultados
-        printf("\n\n Entre %i/%i/%i e %i/%i/%i ha %i dias", data1.dia, data1.mes, data1.ano, data2.dia, data2.mes, data2.ano, dias);
+        printf("\n\nEntre %i/%i/%i e %i/%i/%i ha %i dias", data1.dia, data1.mes, data1.ano, data2.dia, data2.mes, data2.ano, dias);
 
     }
     else {
