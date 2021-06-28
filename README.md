@@ -1,2 +1,2 @@
 # Exercicios-C
- Exercícios em C
+ Exercícios para estudo em C
