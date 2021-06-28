@@ -45,10 +45,11 @@ int main()
         // Pede a matrícula
         printf("\nMatricula: ");
         scanf("%i", &aluno[i].matricula);
+        getchar();
 
         // Pede o nome
         printf("Nome: ");
-        scanf("%s",&aluno[i].nome);
+        gets(aluno[i].nome);
 
         // Loop para verificar se as notas estão entre 0 e 10
         do {
