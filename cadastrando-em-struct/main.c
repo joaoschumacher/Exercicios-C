@@ -24,9 +24,19 @@ int main()
     char rep[10] = {'r','e','p','r','o','v','a','d','o','\0'};
     
     // Pergunta quantos alunos serão cadastrados com um número máximo de 20 alunos
+    do {
+    // Loop para verificar se o número de alunos é maior que zero e no máximo 20
     printf("Quantos alunos? (maximo 20) ");
     scanf("%i", &alunos);
-
+    if (alunos > 0 && alunos <= 20) {
+        break; // Finaliza o loop
+    }
+    else if (alunos <= 0) {
+        printf("\n-----ENTRE COM UM NUMERO MAIOR QUE 0!-----\n");
+    } else {
+        printf("\n-----NO MAXIMO 20 ALUNOS!-----\n");
+    }
+    } while (1);
 
     // FOR para passar por cada aluno de acordo com o valor definido na variável "alunos"
     for(i=0; i < alunos; i++) {
